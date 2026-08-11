@@ -14,5 +14,10 @@ public class CartPage extends BasePage {
         $x("//td[@class='product']//a[text()='" + name + "']").shouldBe(visible);
         return this;
     }
+    @Step("Перейти в корзину из уведомления")
+    public CartPage shoppingCartClicked() {
+        notification.shoppingCartClick();
+        return this;
+    }
 
 }

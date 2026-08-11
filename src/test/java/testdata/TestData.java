@@ -19,4 +19,9 @@ public class TestData {
     public String gender = RandomUtils.getRandomGender();
     public String password = RandomUtils.getRandomString(6);
     public String wrongConfirmPassword = RandomUtils.getRandomString(6);
+
+    public String userCity = faker.address().city();
+    public String userAddress = faker.address().fullAddress();
+    public String userPrefix = faker.phoneNumber().subscriberNumber(7);
+    public String userPhoneNumber = faker.phoneNumber().subscriberNumber(10);;
 }

@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.*;
+import steps.ShopSteps;
 import testdata.TestData;
 
 import java.util.Map;
@@ -16,12 +17,14 @@ public class BaseTest {
     RegistrationPage registrationPage = new RegistrationPage();
     HomePage homePage = new HomePage();
     TestData testData = new TestData();
-
     SearchResultsPage resultsPage = new SearchResultsPage();
-
     CartPage cartPage = new CartPage();
-
     ProductPage productPage = new ProductPage();
+    ShoppingCartPage  shoppingCartPage = new ShoppingCartPage();
+
+    CheckoutPage checkoutPage = new CheckoutPage();
+    ShopSteps shopSteps = new ShopSteps(homePage, resultsPage, testData, cartPage);
+
     @BeforeEach
     void addListener() {
         SelenideLogger.addListener("allure", new AllureSelenide());
