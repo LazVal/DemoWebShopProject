@@ -10,6 +10,9 @@ public class TestData {
     public final String PASSWORD_DO_NOT_MATCH_TEXT = "The password and confirmation password do not match.";
     public final String SEARCH_FOR_TEXT = "Health Book";
     public final String NOTIFICATION_TEXT = "The product has been added to your shopping cart";
+
+
+
     Faker faker = new Faker();
     Faker fakerRu = new Faker(new Locale("ru"));
     public String userName = fakerRu.name().firstName();
@@ -23,5 +26,6 @@ public class TestData {
     public String userCity = faker.address().city();
     public String userAddress = faker.address().fullAddress();
     public String userPrefix = faker.phoneNumber().subscriberNumber(7);
-    public String userPhoneNumber = faker.phoneNumber().subscriberNumber(10);;
+    public String userPhoneNumber = faker.phoneNumber().subscriberNumber(10);
+
 }

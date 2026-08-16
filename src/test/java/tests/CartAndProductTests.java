@@ -1,12 +1,15 @@
 package tests;
 
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.CartPage;
 import pages.ProductPage;
 
 import static io.qameta.allure.Allure.step;
-
+@Tag("FullTest")
+@Story("Поис товара и добавление в корзину")
 public class CartAndProductTests extends BaseTest {
 
     @Test

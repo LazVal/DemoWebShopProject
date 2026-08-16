@@ -1,17 +1,20 @@
 package tests;
 
+import io.qameta.allure.Story;
 import models.FieldValidationExpectation;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.CartPage;
-import pages.CheckoutPage;
 import pages.ProductPage;
+import utils.ValidationError;
 
 import java.util.Arrays;
 import java.util.List;
 
 import static io.qameta.allure.Allure.step;
-
+@Tag("FullTest")
+@Story("Успешное оформление заказа")
 public class CheckoutTest extends BaseTest {
 
     @Test
@@ -64,18 +67,24 @@ public class CheckoutTest extends BaseTest {
                     .clickCheckoutButton();
         });
 
-        step("Оформить заказ без регистрации", () -> {
+        step("Оформление заказа без регистрации", () -> {
             checkoutPage.clickCheckoutAsGuestButton();
         });
-        step("Нажать на кнопку 'Continue''", () -> {
+        step("Нажать на кнопку 'Continue'", () -> {
             checkoutPage.clickOnBillingSave();
         });
         List<FieldValidationExpectation> expectedErrors = Arrays.asList(
-                new FieldValidationExpectation("BillingNewAddress.FirstName", "First name is required."),
-                new FieldValidationExpectation("BillingNewAddress.LastName", "Last name is required.")
+                ValidationError.FIRST_NAME_REQUIRED.toExpectation(),
+                ValidationError.LAST_NAME_REQUIRED.toExpectation(),
+                ValidationError.EMAIL_REQUIRED.toExpectation(),
+                ValidationError.COUNTRY_REQUIRED.toExpectation(),
+                ValidationError.CITY_REQUIRED.toExpectation(),
+                ValidationError.ADDRESS_REQUIRED.toExpectation(),
+                ValidationError.ZIP_REQUIRED.toExpectation(),
+                ValidationError.PHONE_REQUIRED.toExpectation()
         );
-
-        // 4. Проверяем все ошибки
-        checkoutPage.assertValidationErrors(expectedErrors);
+        step("Проверяем все ошибки", () -> {
+            checkoutPage.assertValidationErrors(expectedErrors);
+        });
     }
 }

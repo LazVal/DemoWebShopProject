@@ -33,7 +33,7 @@ public class CheckoutPage extends BasePage {
     public AddressComponent billingAddress = new AddressComponent("BillingNewAddress");
 
 
-    @Step("Нажать на кнопку 'Checkout as a guest")
+    @Step("Нажать на кнопку 'Checkout as a guest'")
     public CheckoutPage clickCheckoutAsGuestButton() {
         checkoutAsGuestButton.click();
         return this;

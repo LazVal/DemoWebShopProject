@@ -16,9 +16,4 @@ public class BasePage {
         return this;
     }
 
-//    public BasePage shoppingCartClicked() {
-//        notification.shoppingCartClick();
-//        return this;
-//    }
-
 }

@@ -2,10 +2,11 @@ package tests;
 
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
-
+@Tag("FullTest")
 @Story("Регистрация на сайте")
 public class RegistrationTest extends BaseTest {
 

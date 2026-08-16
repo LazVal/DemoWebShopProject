@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class HomePage extends BasePage{
     private final SelenideElement titleMainPage = $("h2.topic-html-content-header");
 
-    @Step("Проверка заголовка Welcome to our store")
+    @Step("Проверка заголовка 'Welcome to our store'")
     public HomePage checkTitle(String value) {
         titleMainPage.shouldHave(text(value));
         return this;
