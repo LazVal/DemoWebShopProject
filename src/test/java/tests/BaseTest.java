@@ -37,7 +37,7 @@ public class BaseTest {
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080"); //расширение браузера
         Configuration.baseUrl =System.getProperty("URL","https://demowebshop.tricentis.com/"); //
         Configuration.browser = System.getProperty("BROWSER", "chrome");//
-      //  Configuration.browserVersion = System.getProperty("BROWSER_VERSION");
+        Configuration.browserVersion = System.getProperty("BROWSER_VERSION");
         Configuration.headless = Boolean.parseBoolean(System.getProperty("HEADLESS","false"));
 
 
