@@ -13,7 +13,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static io.qameta.allure.Allure.step;
-@Tag("FullTest")
+@DisplayName("Оформление заказа")
 @Story("Успешное оформление заказа")
 public class CheckoutTest extends BaseTest {
 

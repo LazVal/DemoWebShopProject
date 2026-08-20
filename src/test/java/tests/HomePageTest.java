@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
-@Tag("FullTest")
+@DisplayName("Главная страница")
 @Story("Открытие главной страницы магазина")
 public class HomePageTest extends BaseTest {
 

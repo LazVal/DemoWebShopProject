@@ -47,8 +47,8 @@ public class BaseTest {
                 "enableVideo", true
         ));
         Configuration.browserCapabilities = capabilities;
-        Configuration.remote = System.getProperty("REMOTE");
-        //Configuration.remote = System.getProperty("https://user1:1234@selenoid.qa.guru/wd/hub");
+        //Configuration.remote = System.getProperty("REMOTE");
+        Configuration.remote = System.getProperty("https://user1:1234@selenoid.qa.guru/wd/hub");
 
     }
     @BeforeEach

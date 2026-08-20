@@ -8,8 +8,8 @@ import pages.CartPage;
 import pages.ProductPage;
 
 import static io.qameta.allure.Allure.step;
-@Tag("FullTest")
-@Story("Поис товара и добавление в корзину")
+@DisplayName("Корзина и товары")
+@Story("Поиск товара и добавление в корзину")
 public class CartAndProductTests extends BaseTest {
 
     @Test
