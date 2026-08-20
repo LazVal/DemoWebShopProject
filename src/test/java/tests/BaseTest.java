@@ -61,7 +61,7 @@ public class BaseTest {
         Attach.screenshootAs("Last screenshoot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
-        //Attach.addVideo();
+        Attach.addVideo();
         Selenide.closeWebDriver();
     }
 }

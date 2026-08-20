@@ -25,7 +25,6 @@ public class Attach {
         return (getWebDriver().getPageSource().getBytes(StandardCharsets.UTF_8));
     }
 
-    //добавляем логи браузера
     @Attachment(value = "{attachName}", type = "text/plain")
     public static String attachAsText(String attachName, String message) {
         return message;
@@ -38,23 +37,21 @@ public class Attach {
         );
     }
 
-    //Метод добавления видео в Allure
-//    @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
-//    public static String addVideo() {
-//        return "<html><body><video width='100%' height='100%' controls autoplay><source src='"
-//                + getVideoUrl()
-//                + "' type='video/mp4'></video></body></html>";
-//    }
 
-    //метод получения видео в selenoid по сессии
-//    public static URL getVideoUrl() {
-//        String videoUrl = "https://selenoid.autotests.cloud/video/" + sessionId() + ".mp4";
-//        //обработка ошибки, если URL с видео не найден
-//        try {
-//            return new URL(videoUrl);
-//        } catch (MalformedURLException e) {
-//            e.printStackTrace();
-//        }
-//        return null;
-//    }
+    @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
+    public static String addVideo() {
+        return "<html><body><video width='100%' height='100%' controls autoplay><source src='"
+                + getVideoUrl()
+                + "' type='video/mp4'></video></body></html>";
+    }
+
+    public static URL getVideoUrl() {
+        String videoUrl = "https://selenoid.qa.guru/video/" + sessionId() + ".mp4";
+        try {
+            return new URL(videoUrl);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
