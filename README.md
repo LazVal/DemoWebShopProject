@@ -69,3 +69,42 @@ ___
 **Local launch**
 ```bash  
 gradle clean test
+```
+
+**Remote launch via Jenkins**
+```bash
+clean test
+-Dbrowser=${BROWSER}
+-DselenoidUrl=${SELENOID_URL}
+-Dheadless=${HEADLESS}
+-DbrowserVersion=${BROWSER_VERSION}
+-Dsize=${SIZE}
+```
+
+----
+<a id="allure"></a>
+## Allure report ([link](https://jenkins.qa.guru/job/DemoWebShopProject/allure/))
+
+**Allure report overview**
+<p align="center">  
+<a href="https://jenkins.qa.guru/job/DemoWebShopProject/allure/"><img src="image/Allure Result.png" alt="Allure Report overview" width="950"/></a>  
+</p>
+
+**Suites – test cases**
+<p align="center">  
+<a href="https://jenkins.qa.guru/job/DemoWebShopProject/allure/"><img src="image/Suites.png" alt="Allure Suites" width="950"/></a>  
+</p>
+
+----
+<a id="telegram"></a>
+## Telegram notification with bot
+<p align="center">  
+<img src="images/screen/tg_bot_report.png" width="350"/> 
+</p>
+
+----
+<a id="video"></a>
+## Selenoid test execution video examples
+<p align="center">
+<img title="Selenoid Video" src="images/video/video_report.gif" width="550" height="350"  alt="video">   
+</p>
