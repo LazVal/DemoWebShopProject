@@ -107,5 +107,5 @@ clean test
 <a id="video"></a>
 ## Selenoid test execution video examples
 <p align="center">
-<img title="Selenoid Video" src="images/video/клиенский путь.mp4" width="550" height="350"  alt="video">   
+<img title="Selenoid Video" src="images/video/video.gif" width="550" height="350"  alt="video">   
 </p>
