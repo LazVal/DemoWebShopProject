@@ -103,7 +103,6 @@ clean test
 </p>
 
 ----
-----
 <a id="video"></a>
 ## Selenoid test execution video examples
 <p align="center">
