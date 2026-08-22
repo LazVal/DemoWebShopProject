@@ -103,18 +103,9 @@ clean test
 </p>
 
 ----
+----
 <a id="video"></a>
 ## Selenoid test execution video examples
 <p align="center">
-<img title="Selenoid Video" src="images/video/video_report.gif" width="550" height="350"  alt="video">   
-</p>
-<a id="video"></a>
-## Selenoid test execution video examples
-
-<p align="center">
-<img title="Selenoid Video" src="images/video/video_report.gif" width="550" height="350"  alt="video">   
-</p>
-
-<p align="center">
-<img title="Оформление заказа, клиентский путь" src="images/video/клиентский_путь.gif" width="550" height="350"  alt="Оформление заказа, клиентский путь">   
+<img title="Selenoid Video" src="images/video/клиенский путь.mp4" width="550" height="350"  alt="video">   
 </p>
