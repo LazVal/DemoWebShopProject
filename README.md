@@ -76,6 +76,7 @@ gradle clean test
 clean test
 -Dbrowser=${BROWSER}
 -DselenoidUrl=${SELENOID_URL}
+-DremoteUrl=${REMOTE}
 -Dheadless=${HEADLESS}
 -DbrowserVersion=${BROWSER_VERSION}
 -Dsize=${SIZE}
