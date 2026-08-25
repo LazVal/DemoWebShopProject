@@ -48,7 +48,6 @@ public class BaseTest {
         ));
         Configuration.browserCapabilities = capabilities;
         Configuration.remote = System.getProperty("remote");
-        //Configuration.remote = System.getProperty("https://user1:1234@selenoid.qa.guru/wd/hub");
 
     }
     @BeforeEach
