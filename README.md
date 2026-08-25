@@ -99,7 +99,7 @@ clean test
 <a id="telegram"></a>
 ## Telegram notification with bot
 <p align="center">  
-<img src="images/screen/tg_bot_report.png" width="350"/> 
+<img src="image/tgUi.png" width="350"/> 
 </p>
 
 ----
