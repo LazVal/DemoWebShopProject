@@ -19,13 +19,10 @@ public class BaseTest {
     RegistrationPage registrationPage = new RegistrationPage();
     HomePage homePage = new HomePage();
     TestData testData = new TestData();
-    SearchResultsPage resultsPage = new SearchResultsPage();
-    CartPage cartPage = new CartPage();
-    ProductPage productPage = new ProductPage();
     ShoppingCartPage  shoppingCartPage = new ShoppingCartPage();
 
     CheckoutPage checkoutPage = new CheckoutPage();
-    ShopSteps shopSteps = new ShopSteps(homePage, resultsPage, testData, cartPage);
+    ShopSteps shopSteps = new ShopSteps();
 
     @BeforeEach
     void addListener() {

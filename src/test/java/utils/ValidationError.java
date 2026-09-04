@@ -20,13 +20,6 @@ public enum ValidationError {
         this.message = message;
     }
 
-    public String getFieldName() {
-        return fieldName;
-    }
-
-    public String getMessage() {
-        return message;
-    }
 
     public FieldValidationExpectation toExpectation() {
         return new FieldValidationExpectation(this.fieldName, this.message);

@@ -1,35 +1,21 @@
 package steps;
 
-import pages.CartPage;
-import pages.HomePage;
-import pages.ProductPage;
-import pages.SearchResultsPage;
+import pages.*;
 import testdata.TestData;
-import tests.BaseTest;
 
 import static io.qameta.allure.Allure.step;
 
 public class ShopSteps {
-
-    private final HomePage homePage;
-    private final SearchResultsPage resultsPage;
-    private final TestData testData;
-    private final CartPage cartPage;
-
-    public ShopSteps(HomePage homePage, SearchResultsPage resultsPage, TestData testData, CartPage cartPage) {
-        this.homePage = homePage;
-        this.resultsPage = resultsPage;
-        this.testData = testData;
-        this.cartPage = cartPage;
-    }
+    HomePage homePage = new HomePage();
+    TestData testData = new TestData();
+    SearchResultsPage resultsPage = new SearchResultsPage();
+    CartPage cartPage = new CartPage();
 
     public ProductPage openFirstProductCard() {
         step("Поиск товара через поисковую строку", () -> {
             homePage.searchStore(testData.SEARCH_FOR_TEXT);
         });
-        return step("Выбор первой карточки товара", () -> {
-            return resultsPage.clickFirstProduct();
-        });
+        return step("Выбор первой карточки товара", () -> resultsPage.clickFirstProduct());
     }
 
     public CartPage addProductToCart(ProductPage productPage) {
@@ -41,8 +27,6 @@ public class ShopSteps {
             productPage.verifyNotificationAppeared(testData.NOTIFICATION_TEXT);
         });
 
-        return step("Перейти в корзину из уведомления", () -> {
-            return cartPage.shoppingCartClicked();
-        });
+        return step("Перейти в корзину из уведомления", () -> cartPage.shoppingCartClicked());
     }
 }

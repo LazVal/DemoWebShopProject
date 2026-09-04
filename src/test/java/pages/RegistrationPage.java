@@ -3,8 +3,6 @@ package pages;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
-import java.util.Objects;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -26,7 +24,6 @@ public class RegistrationPage {
     @Step("Открываем страницу регистрации на сайте https://demowebshop.tricentis.com/")
     public RegistrationPage openPage() {
         open("/register");
-        //JsSnippets.deleteAdvertisement();
         return this;
     }
 

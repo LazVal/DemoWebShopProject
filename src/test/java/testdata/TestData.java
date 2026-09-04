@@ -18,7 +18,6 @@ public class TestData {
     public String userName = fakerRu.name().firstName();
     public String lastName = fakerRu.name().lastName();
     public String userEmail = faker.internet().emailAddress();
-    public String userEmailNegative = RandomUtils.getRandomNegativeEmail();
     public String gender = RandomUtils.getRandomGender();
     public String password = RandomUtils.getRandomString(6);
     public String wrongConfirmPassword = RandomUtils.getRandomString(6);

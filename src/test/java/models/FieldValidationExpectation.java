@@ -1,8 +1,8 @@
 package models;
 
 public class FieldValidationExpectation {
-    private final String fieldName;        // значение атрибута data-valmsg-for
-    private final String expectedMessage;  // ожидаемый текст ошибки
+    private final String fieldName;
+    private final String expectedMessage;
 
     public FieldValidationExpectation(String fieldName, String expectedMessage) {
         this.fieldName = fieldName;
